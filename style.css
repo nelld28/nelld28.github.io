@@ -1,0 +1,57 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background: #111;
+    color: white;
+    padding: 2em;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 1em;
+    color: #eee;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 2em;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  input, textarea, button {
+    padding: 0.75em;
+    font-size: 1em;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #222;
+    color: white;
+  }
+  
