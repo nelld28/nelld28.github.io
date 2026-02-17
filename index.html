@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -24,24 +25,7 @@
   </section>
 
 
-<!--
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a multidisciplinary designer creating intuitive digital experiences. I combine visual storytelling with technical skills to bring ideas to life.</p>
-  </section>
 
-  <section id="portfolio">
-    <h2>Selected Work</h2>
-    <div class="gallery">
-      <div class="project">
-        <img src="images/project1.jpg" alt="Project 1" />
-        <h3>Project Title</h3>
-        <p>Brief description of the project.</p>
-      </div>
-      <!--=== Add more projects here 
-    </div>
-  </section>
--->
   <section id="contact">
     <h2>Let's Connect</h2>
     <p>Email me at: <a href="mailto:nelldhakhwa@gmail.com">nelldhakhwa@gmail.com</a></p>
@@ -58,5 +42,751 @@
   </footer>
 
   <script src="script.js"></script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nelly Dhakhwa Portfolio</title>
+
+<style>
+
+/* ========== GLOBAL STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDFBD4;
+    color: #38240D;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FDFBD4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav h3 {
+    color: #713600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #713600;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #C05800;
+}
+
+/* ========== ABOUT SECTION ========== */
+#about {
+    height: 100vh;
+    background: linear-gradient(135deg, #C05800, #713600);
+    color: #FDFBD4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 100px; /* Prevent overlap from nav */
+}
+
+#about h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 600px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-buttons a {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background-color: #FDFBD4;
+    color: #713600;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.social-buttons a:hover {
+    background-color: #38240D;
+    color: #FDFBD4;
+}
+
+/* ========== TECH STACK ========== */
+
+.tech-animated {
+    text-align: center;
+    padding: 120px 20px;
+    background-color: #FDFBD4;
+    color: #38240D;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.tech-animated h2 {
+    font-size: 3em;
+    color: #713600;
+    text-shadow: 0 0 8px #C05800, 0 0 15px rgba(192, 88, 0, 0.4);
+    animation: pulse 2.5s infinite;
+    margin-bottom: 60px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.tech-item {
+    font-size: 1.3em;
+    padding: 15px 35px;
+    border-radius: 30px;
+    background-color: #713600;
+    color: #FDFBD4;
+    transition: 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(56, 36, 13, 0.2);
+}
+
+.tech-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: #C05800;
+    color: #FDFBD4;
+    box-shadow: 0 0 20px rgba(192, 88, 0, 0.6);
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 8px #C05800, 0 0 15px rgba(192, 88, 0, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 15px #C05800, 0 0 25px rgba(192, 88, 0, 0.6);
+    }
+}
+
+
+/* ========== PROJECTS ========== */
+#projects {
+    background-color: #FDFBD4;
+    text-align: center;
+}
+
+#projects h2 {
+    color: #C05800;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.project-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #FFF;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+    color: #713600;
+}
+
+.project-content p {
+    margin-bottom: 15px;
+}
+
+.read-more {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #713600;
+    color: #FDFBD4;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    background-color: #C05800;
+}
+
+/* ========== GALLERY ========== */
+#gallery {
+    background-color: #FDFBD4;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 40px;
+    color: #713600;
+    font-size: 36px;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.gallery-container img,
+.gallery-container video {
+    height: 200px;
+    border-radius: 20px;
+    background-color: #FDFBD4;
+}
+
+/* Hide scrollbar (optional) */
+.gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+.gallery-container::-webkit-scrollbar-thumb {
+    background: #C05800;
+    border-radius: 10px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: #713600;
+    color: #FDFBD4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========== CAROUSEL ========== */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.project-card {
+    min-width: 300px;
+    margin: 0 20px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #713600;
+    padding: 10px;
+}
+
+.arrow:hover {
+    color: #C05800;
+}
+
+/* ========== MODAL ========== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: #FDFBD4;
+    margin: 5% auto;
+    padding: 40px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 20px;
+    position: relative;
+    color: #38240D;
+}
+
+.modal-content h3 {
+    color: #713600;
+    margin-top: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ========== MODAL BUTTON ========== */
+
+.modal-button-container {
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.modal-action-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 40px;
+    background-color: #713600;
+    color: #FDFBD4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: 0.4s ease;
+    box-shadow: 0 6px 18px rgba(56, 36, 13, 0.3);
+    animation: pulseButton 2.5s infinite;
+}
+
+/* Hover Effect */
+.modal-action-btn:hover {
+    background-color: #C05800;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 20px rgba(192, 88, 0, 0.6);
+}
+
+/* Button Pulse Animation */
+@keyframes pulseButton {
+    0%, 100% {
+        box-shadow: 0 6px 18px rgba(56, 36, 13, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(192, 88, 0, 0.6);
+    }
+}
+
+</style>
+</head>
+
+
+<!-- ========== MODAL ========== -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+
+/* ========== CAROUSEL FUNCTIONALITY ========== */
+let currentIndex = 0;
+
+function moveSlide(direction) {
+    const track = document.querySelector(".carousel-track");
+    const cards = document.querySelectorAll(".project-card");
+    const cardWidth = cards[0].offsetWidth + 40;
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > cards.length - 1) currentIndex = cards.length - 1;
+
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+/* ========== MODAL FUNCTIONALITY ========== */
+function openModal(project) {
+    const modal = document.getElementById("projectModal");
+    const modalBody = document.getElementById("modalBody");
+
+    if (project === "sharey") {
+        modalBody.innerHTML = `
+            <h2>SHAREY: A Multi-Agent Shared Housing Assistant</h2>
+            <p><strong>Meal Planning • Chore Coordination • Grocery Automation</strong></p>
+
+            <h3>Project Overview</h3>
+
+            <h3>Problem Statement</h3>
+            <p>As young adults moving into shared housing, coordination becomes exhausting.
+            How can we build a reliable intelligent system that helps housemates coordinate,
+            track, and automate household chores, groceries, and meal planning fairly?</p>
+
+            <h3>Solution</h3>
+            <p>SHAREY is a multi-agent AI system built using Google/Kaggle ADK.
+            It demonstrates LLM-powered agents collaborating to automate household workflows.</p>
+
+            <h3>System Architecture</h3>
+            <ul>
+                <li>Meal Planner Agent → Generates weekly meal plan</li>
+                <li>Grocery Manager Agent → Converts to ingredient list</li>
+                <li>Chore Scheduler Agent → Assigns tasks</li>
+            </ul>
+
+            <h3>Key Concepts</h3>
+            <ul>
+                <li>Multi-Agent Systems</li>
+                <li>Custom Tools</li>
+                <li>State Management</li>
+            </ul>
+
+            <h3>Results</h3>
+            <p>Produces structured meal plans, grocery lists, and chore schedules automatically.</p>
+
+            <div class="modal-button-container">
+                <a href="https://github.com/nelld28/5DAAIC_Sharey" class="modal-action-btn">View Full Project</a>
+            </div>
+        `;
+    }
+    
+    /* ================= PROJECT 2 ================= */
+    if (project === "epitope") {
+        modalBody.innerHTML = `
+            <h2>Epitope Prediction Pipeline</h2>
+            <p><strong>Data Mining Coursework – Trypanosoma Cruzi</strong></p>
+
+            <h3>Problem</h3>
+            <p>Predict newly discovered epitopes within protein sequences using structured feature data.</p>
+
+            <h3>EDA & Pre-Processing</h3>
+            <ul>
+                <li>12,402 observations, 300 variables</li>
+                <li>GroupShuffleSplit (80/20)</li>
+                <li>Isolation Forest removed 415 outliers</li>
+                <li>MinMax Scaling</li>
+            </ul>
+
+            <h3>Feature Reduction</h3>
+            <p>Variance Threshold applied after histogram-based threshold selection.</p>
+
+            <h3>Modelling</h3>
+            <ul>
+                <li>Decision Tree (Best Model)</li>
+                <li>Balanced Accuracy: 0.8515</li>
+                <li>SMOTE applied for oversampling</li>
+            </ul>
+
+            <h3>Outcome</h3>
+            <p>Final pipeline predicted unseen holdout data and exported results to CSV.</p>
+
+            <!--<img src="images/epitope-plot.jpg" style="width:100%; margin-top:20px; border-radius:10px;">-->
+
+            <div class="modal-button-container">
+                <a href="images/epitope-report.pdf" class="modal-action-btn" download>
+                    View Full Report
+                </a>
+            </div>
+
+
+        `;
+    }
+
+    /* ================= PROJECT 3 ================= */
+    if (project === "rain") {
+        modalBody.innerHTML = `
+            <h2>The Rain God’s Festival</h2>
+            <p><strong>A Virtual Museum Experience</strong></p>
+
+            <h3>Overview</h3>
+            <p>Inspired by Rato Machhindranath Jatra, this immersive 3D experience recreates
+            a sacred Nepalese festival inside Unreal Engine.</p>
+
+            <h3>Technical Breakdown</h3>
+            <ul>
+                <li>Blender – 3D assets & chariot modeling</li>
+                <li>Unreal Engine – Blueprint scripting</li>
+                <li>Niagara particle systems</li>
+                <li>MetaHumans + ConvAI integration</li>
+            </ul>
+
+            <h3>Experience Flow</h3>
+            <p>Visitors explore a reconstructed town, observe a five-storey chariot,
+            climb buildings, and conclude at Swayambhunath Stupa with ambient chants.</p>
+
+            <h3>User Feedback</h3>
+            <p>Suggestions included VR integration and a dynamic MetaHuman guide.</p>
+
+            <!--<h3>3D Project View</h3>-->
+
+            <!-- 3D Model Viewer -->
+            <!--<model-viewer 
+                src="models/raingod.glb" 
+                camera-controls 
+                auto-rotate 
+                style="width:100%; height:400px; background:#000; border-radius:15px;">
+            </model-viewer>
+
+            <video controls style="width:100%; margin-top:20px; border-radius:10px;">
+                <source src="videos/raingod-demo.mp4" type="video/mp4">
+            </video>-->
+
+            <div class="modal-button-container">
+                <a href="https://github.com/nelld28/unreal_foc" class="modal-action-btn">View Full Project</a>
+            </div>
+        `;
+    }
+
+
+    /* ================= PROJECT 3 ================= */
+    if (project === "HAARIN") {
+        modalBody.innerHTML = `
+            <h2>Humanoid Agent AR Indoor Navigation System</h2>
+            <p><strong>A Virtual Museum Experience</strong></p>
+
+            <h3>Overview</h3>
+            <p>Leading the way in complex indoor environment with a human-like guide for directionally challenged.</p>
+
+            <h3>Technical Breakdown</h3>
+            <ul>
+                <li>Blender - 3D assets & Environment modeling</li>
+                <li>Unity Engine</li>
+                <li>AR - Hololens</li>
+                <li>MetaHumans + ConvAI integration</li>
+            </ul>
+
+            <h3>Experience Flow</h3>
+            <p>Visitors explore a reconstructed town, observe a five-storey chariot,
+            climb buildings, and conclude at Swayambhunath Stupa with ambient chants.</p>
+
+           
+            <!--<h3>3D Project View</h3>-->
+
+            <!-- 3D Model Viewer -->
+            <!--<model-viewer 
+                src="models/raingod.glb" 
+                camera-controls 
+                auto-rotate 
+                style="width:100%; height:400px; background:#000; border-radius:15px;">
+            </model-viewer>
+            --> 
+
+            <video controls style="width:100%; margin-top:20px; border-radius:10px;">
+                <source src="videos/raingod-demo.mp4" type="video/mp4">
+            </video>    
+
+            <div class="modal-button-container">
+                <a href="https://github.com/nelld28/unreal_foc" class="modal-action-btn">View Full Project</a>
+            </div>
+        `;
+    }
+
+
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("projectModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+</script>
+
+
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<nav>
+    <h3>Nelly</h3>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tech">Tech Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <!--<li><a href="#gallery">Gallery</a></li>-->
+    </ul>
+</nav>
+
+<!-- ========== ABOUT ========== -->
+<section id="about">
+    <h1>Nelly</h1>
+    <p>
+        
+        AI Software Developer passionately creative about bridging AI, immersive tech and data.
+        I create scalable AI pipelines integrated with real-time Unreal Engine environments to bridge the gap between high-performance automation and interactive design.   </p>
+
+    <div class="social-buttons">
+        <!--<a href="www.linkedin.com/in/nelly-dhakhwa">LinkedIn</a>-->
+        <a href="https://github.com/nelld28">GitHub</a>
+        <a href="https://www.instagram.com/laaapte_black?igsh=bHAxMHl0c2txeWxh&utm_source=qr">Instagram</a>
+    </div>
+</section>
+
+<!-- ========== TECH STACK ========== -->
+<section id="tech" class="tech-animated">
+    <h2>Tech Stack</h2>
+
+    <div class="tech-list">
+        <div class="tech-item">Python</div>
+        <div class="tech-item">React</div>
+        <div class="tech-item">Machine Learning</div>
+        <div class="tech-item">Unreal Engine</div>
+        <div class="tech-item">Blender</div>
+        <div class="tech-item">Data Mining</div>
+    </div>
+</section>
+
+
+<!-- ========== PROJECTS ========== -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="carousel-container">
+
+        <button class="arrow left" onclick="moveSlide(-1)">❮</button>
+
+        <div class="carousel-track">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <img src="images/sharey.png" alt="SHAREY">
+                <div class="project-content">
+                    <h3>SHAREY</h3>
+                    <p>Multi-Agent Shared Housing Assistant</p>
+                    <button class="read-more" onclick="openModal('sharey')">Read More</button>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <img src="images/epitope.png" alt="Epitope Prediction">
+                <div class="project-content">
+                    <h3>Epitope Prediction Pipeline</h3>
+                    <p>Data Mining & ML Classification Project</p>
+                    <button class="read-more" onclick="openModal('epitope')">Read More</button>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <img src="images/raingod.png" alt="Rain God Festival">
+                <div class="project-content">
+                    <h3>The Rain God’s Festival</h3>
+                    <p>Virtual Museum Experience</p>
+                    <button class="read-more" onclick="openModal('rain')">Read More</button>
+                </div>
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="project-card">
+                <!--<img src="images/arin.png" alt="Rain God Festival">-->
+                <div class="project-content">
+                    <h3>HAARIN</h3>
+                    <p>AR Indoor Navigation System</p>
+                    <button class="read-more" onclick="openModal('HAARIN')">Read More</button>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="arrow right" onclick="moveSlide(1)">❯</button>
+
+    </div>
+</section>
+
+<!-- ========== GALLERY ========== -->
+<!--<section id="gallery">
+    <h2>Gallery</h2>
+
+    <div class="gallery-container">
+        <img src="images/AI.jpg" alt="">
+        <img src="images/gallery2.jpg" alt="">
+        <img src="images/gallery3.jpg" alt="">
+
+        
+        
+        <video controls>
+            <source src="videos/demo.mp4" type="video/mp4">
+        </video>
+        
+    </div>
+</section> 
+-->
+<!-- ========== FOOTER ========== -->
+<footer>
+    © 2026 Nelly Dhakhwa. All rights reserved.
+</footer>
+
 </body>
 </html>
